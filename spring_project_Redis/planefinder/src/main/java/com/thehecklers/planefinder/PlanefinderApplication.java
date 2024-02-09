@@ -1,13 +1,13 @@
-package com.redis.redis;
+package com.thehecklers.planefinder;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RedisApplication {
+public class PlanefinderApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RedisApplication.class, args);
+		SpringApplication.run(PlanefinderApplication.class, args);
 	}
 
 }
