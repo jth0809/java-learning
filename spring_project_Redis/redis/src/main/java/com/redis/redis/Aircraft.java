@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.redis.core.RedisHash;
 import org.springframework.data.annotation.Id;
 
 import java.time.Instant;
@@ -12,6 +13,7 @@ import java.time.Instant;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@RedisHash
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Aircraft {
     @Id
@@ -37,7 +39,7 @@ public class Aircraft {
     private Instant posUpdateTime;
     @JsonProperty("bds40_seen_time")
     private Instant bds40SeenTime;
-
+    /*
     public String getLastSeenTime() {
         return lastSeenTime.toString();
     }
@@ -73,4 +75,5 @@ public class Aircraft {
             this.bds40SeenTime = Instant.ofEpochSecond(0);
         }
     }
+    */
 }
