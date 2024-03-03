@@ -1,6 +1,5 @@
-package com.example.demo.domain;
+package com.example.demo.domain.item;
 
-import com.example.demo.domain.item.Item;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,16 +9,15 @@ import lombok.Setter;
 
 @Entity
 @Getter @Setter
-public class OrderItem {
+public abstract class Item {
+    
     @Id @GeneratedValue
-    @Column(name = "order_item_id")
+    @Column(name = "item_id")
     private Long id;
 
-    private Item item;
+    private String name;
 
-    private Order order;
-    
-    private int orderPrice;
+    private int price;
 
-    private int count;
+    private int stockQuantity;
 }
