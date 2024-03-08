@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -19,6 +20,7 @@ public class Member {
 
     private String name;
     
+    @Embedded
     private Address address;
 
     private List<Order> orders = new ArrayList<>();

@@ -1,5 +1,5 @@
 package com.example.demo.domain;
 
-public class OrderStatus {
-    
+public enum OrderStatus {
+    ORDER, CANCEL
 }
